@@ -1,0 +1,22 @@
+package map;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapTask {
+	public static void main(String[] args) {
+		HashMap<String, Integer> menu = new HashMap<>();
+		Scanner sc = new Scanner(System.in);
+		
+		menu.put("아메리카노", 2000);
+		menu.put("카페라떼", 2500);
+		menu.put("바닐라라떼", 4000);
+		menu.put("초코라떼", 4000);
+		
+		int pick = sc.nextInt();
+		
+		
+		
+	}
+
+}

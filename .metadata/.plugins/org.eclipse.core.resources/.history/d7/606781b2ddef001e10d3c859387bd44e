@@ -1,0 +1,35 @@
+package ex01;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class Student {
+	// 필드
+	int studentNumber;
+	String studentName;
+	int[] grades;
+	
+	// 생성자
+	public Student(String studentName, int[] grades) {
+		super();
+		this.studentName = studentName;
+		this.grades = grades;
+	}
+	
+	// 메소드
+	void showGradeInfo() {
+		System.out.println("=== 성적 정보 ===");
+		System.out.println("이름 : " + studentName + ", 번호 : " + studentNumber + ", 성적(국어, 영어, 수학) : " + Arrays.toString(grades));
+		System.out.println("===============");
+	}
+	
+	double scoreAvg() {
+		double result;
+		for(int i = 0; i < grades.length; i++) {
+			result += grades[i];
+		}
+		return result / grades.length;
+	}
+	
+
+}

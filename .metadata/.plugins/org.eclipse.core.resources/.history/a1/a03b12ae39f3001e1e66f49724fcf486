@@ -1,0 +1,42 @@
+package final1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Board {
+//  Board 클래스
+//  - 메소드(매개변수와 리턴값의 유무는 본인의 로직으로 판단)
+//  addPost: 제목과 내용을 받아 새로운 게시물을 게시판에 추가
+//  deletePost: 주어진 ID에 해당하는 게시물을 게시판에서 삭제
+//     해당 ID가 게시판에 없을 경우 IllegalArgumentException을 던진다
+//  getAllPosts(): 모든 게시물을 리스트로 반환
+	ArrayList<Post> board = new ArrayList<>();
+	int num = 0;
+	int id = this.id;
+
+	void addPost(String name, String content) {
+		board.add(new Post(num, name, content));
+		num += 1;
+		System.out.println(num);
+
+	}
+
+	void deletePost(int id1) throws IllegalArgumentException {
+			if (id1 == id) {
+				System.out.println(id1);
+				board.remove(id1);
+				System.out.println("삭제");
+			}
+		
+
+	}
+
+	void getAllPosts() {
+		Iterator iter = board.iterator();
+		while (iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+
+	}
+
+}

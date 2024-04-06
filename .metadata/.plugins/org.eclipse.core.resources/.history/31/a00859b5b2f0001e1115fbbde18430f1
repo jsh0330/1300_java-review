@@ -1,0 +1,30 @@
+package set;
+
+public class Student {
+	// 필드
+	int number;
+	String name;
+
+	// 생성자
+	public Student(int number, String name) {
+		super();
+		this.number = number;
+		this.name = name;
+	}
+
+	// 메소드
+	// equals 메소드 재정의
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+
+	// hashCode 메소드 재정의
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
+
+}

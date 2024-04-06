@@ -1,0 +1,40 @@
+package employee;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.Map.Entry;
+
+public class EmployeeMain {
+	public static void main(String[] args) {
+		HashMap<String, ArrayList<Object>> emp = new HashMap<>();
+		ArrayList<Object> ID1 = new ArrayList<>();
+		ID1.add("짱구");
+		ID1.add(5);
+		ID1.add("영업부");
+		ArrayList<Object> ID2 = new ArrayList<>();
+		ID2.add("철수");
+		ID2.add(5);
+		ID2.add("개발부");
+		ArrayList<Object> ID3 = new ArrayList<>();
+		ID3.add("유리");
+		ID3.add(5);
+		ID3.add("사업부");
+
+		emp.put("001", ID1);
+		emp.put("002", ID2);
+		emp.put("003", ID3);
+
+
+		System.out.println(emp.get("001"));
+		
+		Set<Entry<String, ArrayList<Object>>> items = emp.entrySet();
+		for (Entry<String, ArrayList<Object>> entry : items) {
+			System.out.println(entry);
+		}
+		emp.remove("001");
+		System.out.println(emp);
+		
+	}
+
+}

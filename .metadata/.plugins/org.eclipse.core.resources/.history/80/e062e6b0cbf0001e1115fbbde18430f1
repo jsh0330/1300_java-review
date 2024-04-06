@@ -1,0 +1,17 @@
+package employee;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class EmployeeMain {
+	public static void main(String[] args) {
+		HashMap<Integer, String> emp = new HashMap<>();
+		ArrayList<String> ID1 = new ArrayList<>();
+		ID1.add("짱구");		
+		ID1.add("5");
+		ID1.add("영업부");
+		
+		
+	}
+
+}

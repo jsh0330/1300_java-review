@@ -1,0 +1,15 @@
+package list;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class ArrayListTask {
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		random.nextInt(20);
+	}
+
+}

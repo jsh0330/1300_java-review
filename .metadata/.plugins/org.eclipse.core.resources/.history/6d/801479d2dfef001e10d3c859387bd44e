@@ -1,0 +1,14 @@
+package ex01;
+
+public class Main {
+	public static void main(String[] args) {
+		School school = new School();
+		
+		int[] grade1 = {100, 80, 70};
+		Student st1 = new Student("장서혁1", grade1);
+		
+		school.join(st1);
+		
+	}
+
+}

@@ -1,0 +1,43 @@
+package MyException;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import ex02.MyException;
+
+public class Main {
+	public static void main(String[] args) {
+		// 1. 스캐너 임포트
+		Scanner sc = new Scanner(System.in);
+
+		// 2. 정수형 변수 3개 선언
+		// num1 : 나뉠값, num2 : 나눌값, num3 : 결과값
+		int num1 = 0, num2 = 0, num3 = 0;
+
+		// num1에 나누어질 값 입력
+		System.out.print("나누어질 숫자를 입력하세요 : ");
+		num1 = sc.nextInt();
+
+		// num2에 나눌 값 입력
+		System.out.print("나눌 숫자를 입력하세요 : ");
+		num2 = sc.nextInt();
+
+		try {
+			if (num1 > 0 && num2 > 0) {
+				num3 = num1 / num2;
+				System.out.println("나눈 결과 : " + num3);
+
+			} else if (num2 <= 0) {
+				throw new MyException("0 또는 음수는 나눌 수 없습니다");
+			} else {
+				throw new MyException("예상치 못한 오류가 발생하였습니다");
+			}
+		} catch (MyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InputMismatchException e) {
+			e.getMessage();
+		}
+	}
+
+}

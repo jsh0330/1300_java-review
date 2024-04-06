@@ -1,0 +1,39 @@
+package ex01;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class Student {
+	// 필드
+	int studentNumber;
+	String studentName;
+	int[] grades;
+	
+	// 생성자
+	public Student(String studentName, int[] grades) {
+		super();
+		this.studentName = studentName;
+		this.grades = grades;
+	}
+	
+	// 메소드
+	// 1. 이름, 번호, 성적을 각각 출력
+	void showGradeInfo() {
+		System.out.println("=== 성적 정보 ===");
+		System.out.println("이름 : " + studentName + ", 번호 : " + studentNumber + ", 성적(국어, 영어, 수학) : " + Arrays.toString(grades));
+		System.out.println("===============");
+	}
+	
+	// 1. 성적을 모두 더해줄 result 선언
+	// 2. for문을 이용해 result에 성적 다 더하기
+	// 3. result를 이용해 평균을 구하고 리턴
+	double scoreAvg() {
+		double result = 0;
+		for(int i = 0; i < grades.length; i++) {
+			result += grades[i];
+		}
+		return result / grades.length;
+	}
+	
+
+}
